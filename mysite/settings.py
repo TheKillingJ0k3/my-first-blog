@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+# cd ~/th3ki11ingj0k3.pythonanywhere.com
+
 # TUTORIAL
 # A model in Django is a special kind of object – it is saved in the database. (SQLite)
 #
