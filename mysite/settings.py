@@ -32,6 +32,16 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 # $ pip3.8 install --user pythonanywhere in PythonAnywhere Bash and then $ pa_autoconfigure_django.py --python=3.8 https://github.com/<your-github-username>/my-first-blog.git
 # initialize the admin account with createsuperuser (virtualenv automatically activated) so we run (username.pythonanywhere.com) $ python manage.py createsuperuser
 
+#urls: use urls.py / create new urls file inside blog
+# we put the site logic in views: it reqursts info from model and pass it to a template
+
+
+#TODO: even if pythonanywhere bash gives error at git pull, it still uploads files correctly
+
+# Django's interactive console: python manage.py shell
+# views connect models and templates so that we can see posts in our site / post_list view we will need to take the models we want to display and pass them to the template
+
+
 
 from pathlib import Path
 
@@ -129,7 +139,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'EET'
+TIME_ZONE = 'Europe/Athens'
 
 USE_I18N = True
 
