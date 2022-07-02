@@ -20,14 +20,17 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 # change models -> tell python we have changes in model: python manage.py makemigrations blog
 # apply migration file to db: python manage.py migrate blog
 # change admin.py
-# create superuser to login: python manage.py createsuperuser (ggpat / hotmail / PH@1gr)
+# create superuser to login: python manage.py createsuperuser (ggpat / GG-hotmail / PH@1gr => SAME IN PYTHONANYWHERE)
 #login -> see Django admin dashboard
 
 #Deploy = make site onine - server provider = PythonAnywhere
 # add git init in project folder - git config name/email
 # .gitignore to ignore files for updates (new file in VS Code saved in base dir)
 # use separate databases for your local testing site and your live website on PythonAnywhere
-
+# create PythonAnywhere account - yourusername.pythonanywhere.com
+# create PythonAnywhere API token (4860c7b395d9bab1c7a647a6b9aa2b3842c2ef56)
+# $ pip3.8 install --user pythonanywhere in PythonAnywhere Bash and then $ pa_autoconfigure_django.py --python=3.8 https://github.com/<your-github-username>/my-first-blog.git
+# initialize the admin account with createsuperuser (virtualenv automatically activated) so we run (username.pythonanywhere.com) $ python manage.py createsuperuser
 
 
 from pathlib import Path
