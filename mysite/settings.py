@@ -51,6 +51,7 @@ Then refresh your page to see if the post appears there.
 This step does not post shit in my site'''
 
 #create folder static in blog app
+# create base template
 
 
 from pathlib import Path
