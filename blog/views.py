@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.utils import timezone
 from .models import Post
 from django.shortcuts import render, get_object_or_404
+from .forms import PostForm
+from django.shortcuts import redirect
 
 '''
 views connect models and templates. In our post_list view we will need to take the models we want to display and pass them to the template. 
@@ -27,3 +29,16 @@ It should look like this: {'posts': posts}. Please note that the part before : i
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'blog/post_detail.html', {'post': post}) # to extend application - post view
+
+def post_new(request):
+    if request.method == "POST":
+        form = PostForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.published_date = timezone.now()
+            post.save()
+            return redirect('post_detail', pk=post.pk)
+    else:
+        form = PostForm()
+    return render(request, 'blog/post_edit.html', {'form': form})

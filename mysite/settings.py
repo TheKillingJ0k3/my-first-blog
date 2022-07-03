@@ -52,6 +52,8 @@ This step does not post shit in my site'''
 
 #create folder static in blog app
 # create base template
+#create post view
+#django forms
 
 
 from pathlib import Path
