@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 # cd ~/th3ki11ingj0k3.pythonanywhere.com
 
+# configure app from github to pythonanywhere: $ pa_autoconfigure_django.py --python=3.8 https://github.com/<your-github-username>/my-first-blog.git
+
+
 # TUTORIAL
 # A model in Django is a special kind of object – it is saved in the database. (SQLite)
 #
